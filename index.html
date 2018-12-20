@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>幻维数码</title>
+	<meta charset="UTF-8">
+	<!-- 设置宽度为设备的宽度，默认不缩放，不允许用户缩放（即禁止缩放），在网页加载时隐藏地址栏与导航栏（ios7.1新增） -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏。 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- 当启动webapp功能时，显示手机信号、时间、电池的顶部导航栏的颜色。默认值为default（白色），可以定为black（黑色）和black-translucent（灰色半透明）。这个主要是根据实际的页面设计的主体色为搭配来进行设置。 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<!-- 忽略页面中的数字识别为电话号码、email识别 -->
+	<meta name="format-detection" content="telephone=no, email=no">
+	<!-- 启用360浏览器的极速模式(webkit) -->
+	<meta name="renderer" content="webkit">
+	<!-- 避免IE使用兼容模式 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+	<meta name="HandheldFriendly" content="true">
+	<!-- 微软的老式浏览器 -->
+	<meta name="MobileOptimized" content="320">
+	<!-- uc强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<!-- QQ强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+	<!-- QQ应用模式 -->
+	<meta name="x5-page-mode" content="app">
+	<!-- windows phone 点击无高光 -->
+	<meta name="msapplication-tap-highlight" content="no">
+	<!-- 网页不会被缓存 -->
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body>
+	<div class="page first hide">
+		<div class="scale">
+			<div class="swiper-container-first swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img url="firstphoto1.png"></div>
+			        <div class="swiper-slide"><img url="firstphoto2.png"></div>
+			        <div class="swiper-slide"><img url="firstphoto3.png"></div>
+			        <div class="swiper-slide"><img url="firstphoto4.png"></div>
+			    </div>
+			    <!-- Add Pagination -->
+			    <div class="swiper-pagination swiper-pagination-white"></div>
+			</div>
+			<div class="first-bg"><img url="first.png"></div>
+			<canvas id="kuaishan" width=591 height=960></canvas>
+		</div>
+		<div class="next-page"><img url="arrow-right.png"></div>
+	</div>
+
+	<div class="page1 page hide">
+		<div class="box page"><img url="page1.jpg"></div>
+		<div class="prev-page"><img url="arrow-left.png"></div>
+		<div class="next-page"><img url="arrow-right.png"></div>
+	</div>
+
+	<div class="page2 page hide">
+		<div class="box page">
+			<img url="page2.jpg">
+			<!-- page2-swiper -->
+			<div class="swiper-container1 swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img url="photo1-1.jpg"></div>
+			        <div class="swiper-slide"><img url="photo1-2.jpg"></div>
+			        <div class="swiper-slide"><img url="photo1-3.jpg"></div>
+			        <div class="swiper-slide"><img url="photo1-4.jpg"></div>
+			        <div class="swiper-slide"><img url="photo1-5.jpg"></div>
+			        <div class="swiper-slide"><img url="photo1-6.jpg"></div>
+			        <div class="swiper-slide"><img url="photo1-7.jpg"></div>
+			    </div>
+			    <div class="swiper-pagination swiper-pagination1 swiper-pagination-white"></div>
+			    <div class="swiper-button-next swiper-button-next1 swiper-button-white"></div>
+			    <div class="swiper-button-prev swiper-button-prev1 swiper-button-white"></div>
+			</div>
+			<!-- page2-swiper -->
+			<div class="swiper-container2 swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img url="photo2-1.jpg"></div>
+			        <div class="swiper-slide"><img url="photo2-2.jpg"></div>
+			        <div class="swiper-slide"><img url="photo2-3.jpg"></div>
+			        <div class="swiper-slide"><img url="photo2-4.jpg"></div>
+			    </div>
+			    <div class="swiper-pagination swiper-pagination2 swiper-pagination-white"></div>
+			    <div class="swiper-button-next swiper-button-next2 swiper-button-white"></div>
+			    <div class="swiper-button-prev swiper-button-prev2 swiper-button-white"></div>
+			</div>
+			<!-- page2-swiper -->
+			<div class="swiper-container3 swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img url="photo3-1.jpg"></div>
+			        <div class="swiper-slide"><img url="photo3-2.jpg"></div>
+			        <div class="swiper-slide"><img url="photo3-3.jpg"></div>
+			        <div class="swiper-slide"><img url="photo3-4.jpg"></div>
+			        <div class="swiper-slide"><img url="photo3-5.jpg"></div>
+			    </div>
+			    <div class="swiper-pagination swiper-pagination3 swiper-pagination-white"></div>
+			    <div class="swiper-button-next swiper-button-next3 swiper-button-white"></div>
+			    <div class="swiper-button-prev swiper-button-prev3 swiper-button-white"></div>
+			</div>
+			<!-- page2-swiper -->
+			<div class="swiper-container4 swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img url="photo4-1.jpg"></div>
+			        <div class="swiper-slide"><img url="photo4-2.jpg"></div>
+			        <div class="swiper-slide"><img url="photo4-3.jpg"></div>
+			        <div class="swiper-slide"><img url="photo4-4.jpg"></div>
+			        <div class="swiper-slide"><img url="photo4-5.jpg"></div>
+			    </div>
+			    <div class="swiper-pagination swiper-pagination4 swiper-pagination-white"></div>
+			    <div class="swiper-button-next swiper-button-next4 swiper-button-white"></div>
+			    <div class="swiper-button-prev swiper-button-prev4 swiper-button-white"></div>
+			</div>
+			<!-- page2-swiper -->
+			<div class="swiper-container5 swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img url="photo5-1.jpg"></div>
+			        <div class="swiper-slide"><img url="photo5-2.jpg"></div>
+			        <div class="swiper-slide"><img url="photo5-3.jpg"></div>
+			    </div>
+			    <div class="swiper-pagination swiper-pagination5 swiper-pagination-white"></div>
+			    <div class="swiper-button-next swiper-button-next5 swiper-button-white"></div>
+			    <div class="swiper-button-prev swiper-button-prev5 swiper-button-white"></div>
+			</div>
+				
+			<div class="page2-video1 page2-video">
+				<div class="video-box"><video class="hide" src="videos/video1.mp4" playsinline webkit-plasinline x-webkit-airplay></video></div>
+				<div class="play-btn"><img url="play-btn.png"></div>
+			</div>	
+			<div class="page2-video1 page2-video">
+				<div class="video-box"><video class="hide" src="videos/video2.mp4" playsinline webkit-plasinline x-webkit-airplay></video></div>
+				<div class="play-btn"><img url="play-btn.png"></div>
+			</div>
+
+			<div class="fontlist">
+				<div class="font-box">
+					<div class="phase">
+						<p>轻轻的我走了，</p>
+						<p>正如我轻轻的来；</p>
+						<p>我挥一挥衣袖，</p>
+						<p>却带走满满收获。</p>
+						<p>83天投身企业，</p>
+						<p>疑惑、纠结、泄气、无奈中，</p>
+						<p>跨过一道道坎，</p>
+						<p>奋力摸索前行。</p>
+						<p>学习、求教、探究、领悟中，</p>
+						<p>历经磨练，</p>
+						<p>更接近高科技前沿，</p>
+						<p>更清晰前行方向。</p>
+						<p>感谢优秀导师超哥一路指点；</p>
+						<p>承蒙两位IT高手欢欢和冬冬关照，</p>
+						<p>每日饭友聚会不吝赐教，</p>
+						<p>让孤单的我感受到，</p>
+						<p>浓浓的暖意……</p>
+						<p>感恩在幻维遇见的每一个友善的人!</p>
+						<p>离开,没有遗憾；</p>
+						<p>告别,只为更好地出发!</p>
+						<p> </p>
+						<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--2018年冬</p>
+					</div>
+					<div class="phase">
+						<p>轻轻的我走了，</p>
+						<p>正如我轻轻的来；</p>
+						<p>我挥一挥衣袖，</p>
+						<p>却带走满满收获。</p>
+						<p>83天投身企业，</p>
+						<p>疑惑、纠结、泄气、无奈中，</p>
+						<p>跨过一道道坎，</p>
+						<p>奋力摸索前行。</p>
+						<p>学习、求教、探究、领悟中，</p>
+						<p>历经磨练，</p>
+						<p>更接近高科技前沿，</p>
+						<p>更清晰前行方向。</p>
+						<p>感谢优秀导师超哥一路指点；</p>
+						<p>承蒙两位IT高手欢欢和冬冬关照，</p>
+						<p>每日饭友聚会不吝赐教，</p>
+						<p>让孤单的我感受到，</p>
+						<p>浓浓的暖意……</p>
+						<p>感恩在幻维遇见的每一个友善的人!</p>
+						<p>离开,没有遗憾；</p>
+						<p>告别,只为更好地出发!</p>
+						<p> </p>
+						<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--2018年冬</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="prev-page"><img url="arrow-left.png"></div>
+	</div>
+
+<script src="js/swiper.min.js"></script>
+<script> 
+var verson="2018-12-14-1"; 
+var bgmSound;
+if(!('WeixinJSBridge' in window)){
+    if('ontouchstart' in document.documentElement) document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+	else onBridgeReady(); 
+}else{
+   onBridgeReady();
+}
+function onBridgeReady(){ 
+  //bgmSound=getSound('bgm');  
+}
+getAllLinks(['images/layout.css'],function(links){  //load css
+   if(!('pushState' in history)){
+     alert('不支持当前浏览器！'); 
+	 return;
+   }
+   var link=document.createElement('link');
+   link.rel="stylesheet";
+   link.href=links[0];
+   document.head.appendChild(link);
+   load_modules([/*'http://res.wx.qq.com/open/js/jweixin-1.0.0.js','/sysScripts/tools.js',*/'js/h5lib.js','js/main.js'],function(){  //load js
+       console.log('done');
+  });
+});
+function load_modules(urls, fn) {
+	var arr = urls;
+	if (typeof(urls) == 'string') arr = [urls];
+	var load = function() {
+			var s = document.createElement('script');
+			s.onload = function() {
+				this.parentNode.removeChild(this);
+				if (arr.length) load();
+				else fn && fn()
+			};
+			s.onerror = function() {
+				this.parentNode.removeChild(this)
+			};
+			s.src = arr[0]+"?verson="+verson;
+			arr.shift();
+			document.body.appendChild(s)
+		};
+	load()
+}
+function getSound(name,fn){
+	  var audio=new Audio();
+	  audio.preload=true;
+	  audio.autoplay=false;
+	  //if(isTouch&&name!='btn') audio.muted=true;
+	  var obj={};
+	  if(name=='bgm'){
+	    audio.loop=true;
+		audio.addEventListener('play',function(){
+			this.isInit=true;
+			//isMute=false;
+			music_btn.addClass('play');
+		});
+		
+		audio.addEventListener('pause',function(){
+			//isMute=true;
+			music_btn.removeClass('play');
+		});
+		
+		obj=audio;
+	  }else{
+		 obj.play=function(){ 
+			 //if(isMute) return;
+			 audio.currentTime=0;
+			 audio.play();
+		 };
+		 obj.pause=function(){
+			 audio.pause(); 
+			 //if(isTouch) audio.muted=false;
+		 };
+		 obj.audio=audio;
+		 
+	  }
+	  audio.src='sounds/'+name+'.mp3';
+	  audio.load();
+      fn&&fn();
+	  return obj;
+}
+function getAllLinks(arr,completeFn,progressFn){
+    if(typeof(arr)!="object"||arr.length==0) return;  
+    var getCachedLink=function(url,fn){
+	  var url2=url;
+	  url+=(url.indexOf('?')>-1?'&':'?')+'verson='+verson;   //去缓存
+	  window.URL = window.URL||window.webkitURL||window.mozURL||window.msURL;
+	  var isCross=false;
+	  if(url.indexOf('://')>-1&&url.indexOf(location.host)<0)  isCross=true;
+	  if(false&&window.URL&&!isCross){ 
+	    if(!('cachedLinks' in window)) cachedLinks={};
+        if(cachedLinks[url2]){
+		   fn&&fn(cachedLinks[url2]); 
+		}else{	
+			var xhr = new XMLHttpRequest();   
+			xhr.open("GET", url, true);
+			xhr.responseType = "blob";
+			xhr.onreadystatechange = function() {
+				if (this.readyState == 4) {
+					if(this.status == 200){
+						var blob = this.response; 
+						var link=window.URL.createObjectURL(blob);
+						cachedLinks[url2]=link;
+						fn&&fn(link);
+					}else{
+						getCachedLink(url2,fn);  //失败重连
+					}
+				}
+			}
+			xhr.send();
+		}
+	  }else { 
+		var ext=url2.split('.').pop().toLowerCase();
+		url2+=(url2.indexOf('?')>-1?'&':'?')+'verson='+verson;   //去缓存
+		if(ext=='jpg'||ext=='png'||ext=='gif'){  //缓存图片
+		   if(!('cachedImgs' in window))  cachedImgs=[];
+			var img=new Image();
+			img.onload=function(){
+			   //cachedImgs.push(this);
+			   cachedImgs[url.split('?')[0]]=this;
+			   fn&&fn(url2); 
+			};
+			img.onerror=function(){
+			  this.src=url2;
+			  console.log('fail');
+			};
+			img.src=url2;
+		}else  fn&&fn(url2); 
+	  }
+    };
+    var data=[];
+	var loaded=0;
+	var total=arr.length;
+	var cb=function(link){
+	      loaded++;
+		  data.push(link);
+		  if(loaded==total){
+			 progressFn&&progressFn(1);
+			 completeFn&&completeFn(data);
+		  }else{
+			 progressFn&&progressFn(loaded/total);
+		  }
+	};
+	for(var i=0;i<total;i++){
+	  getCachedLink(arr[i],cb);
+	}
+}
+</script>
+</body>
+</html>
