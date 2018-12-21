@@ -28,6 +28,7 @@ var swiperContainers = $(".page2 .swiper-container");
 var page2Videos = $(".page2-video");
 var fontlist = $(".fontlist");
 var playBtn = $(".play-btn");
+var videos = $("video");
 
 var projectName="huanwei"; 
 window.onerror=function(msg,url,line){
@@ -98,6 +99,13 @@ function init(){
 	initEvent();
 	var firstImgs = $(".first img,.page1 img,.page2 img");
 	syncLoadImg(firstImgs,function(){
+		!(function playBgm(){
+			if(bgmSound) {
+				bgmSound.play();
+			} else {
+				setTimeout(playBgm,100);
+			}
+		})();
 		$(".first").fadeIn(400);
 		swiper = new Swiper('.swiper-container-first', {
 	        spaceBetween:30,
@@ -164,7 +172,17 @@ function initEvent(){
 		video.show();
 		video[0].play();
 		video[0].controls = true;
-	})
+	});
+
+	videos.bind("play",function(){
+		bgmSound.pause();
+	});
+
+	videos.bind("pause",function(){
+		if(videos[0].paused&&videos[1].paused) {
+			bgmSound.play();
+		}
+	});
 }
 
 function initUI(){
