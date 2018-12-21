@@ -102,17 +102,17 @@ function init(){
 		!(function playBgm(){
 			if(bgmSound) {
 				bgmSound.play();
+				$(".first").fadeIn(400);
+				swiper = new Swiper('.swiper-container-first', {
+			        spaceBetween:30,
+			        autoplay:true,
+			        effect: 'fade',
+			    });
+				startKuaishan();
 			} else {
 				setTimeout(playBgm,100);
 			}
 		})();
-		$(".first").fadeIn(400);
-		swiper = new Swiper('.swiper-container-first', {
-	        spaceBetween:30,
-	        autoplay:true,
-	        effect: 'fade',
-	    });
-		startKuaishan();
 	});
 }
 
