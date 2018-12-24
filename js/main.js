@@ -103,6 +103,7 @@ function init(){
 			if(bgmSound) {
 				bgmSound.play();
 				$(".first").fadeIn(400);
+				$(".loading").fadeOut(400);
 				swiper = new Swiper('.swiper-container-first', {
 			        spaceBetween:30,
 			        autoplay:true,
@@ -110,6 +111,7 @@ function init(){
 			    });
 				startKuaishan();
 			} else {
+				console.log(bgmSound);
 				setTimeout(playBgm,100);
 			}
 		})();
@@ -247,15 +249,6 @@ function startKuaishan(){
 	ctx.textBaseline="middle"; 
 	ctx.textAlign="center";
 	var timelines=[
-	                
-	    //             [1000,'Emmmmm...','writeIn',100,false,2000,false,0,0,'writeOut'], 	
-     //                [3000,'这是一期','scaleIn',600,false,2000,false,0,0,'rotateOut'],  
-     //                [4500,'反思','horizontalIn',600,false,2000,false,-65*0.5,-40,'horizontalOut'],
-     //                [5000,'为什么','horizontalIn',600,false,2000,false,65*1.5*0.5,40,'horizontalOut',true],					
-				 //    [6500,'断刊','horizontalIn'  ,600,false,2000,false,-65*0.5,-40,'horizontalOut'],	
-     //                [7000,'那么久','horizontalIn',600,false,2000,false,65*1.5*0.5,40,'horizontalOut',true],
-					// [8000,'的内刊','scaleIn',600,false,2000,false,0,0,'rotateOut'],
-     //                [9000,'...'    ,'writeIn',100,false,2000,false,0,0,'writeOut'], 
 
                     [1000,'2019','scaleIn',600,false,2000,false,0,0,'rotateOut'], 	
                     [2500,'爱你！','horizontalIn',600,false,2000,false,-65*0.5,-40,'horizontalOut'],
@@ -282,9 +275,7 @@ function startKuaishan(){
 					[5000+14000,'往下看呗！','writeIn',100,false,2000,false,0,0,'writeOut'],
 					[6100+14000,'请慢慢','horizontalIn',600,false,2000,false,-65*1.5*0.5,-40,'horizontalOut'],
 					[6600+14000,'开始欣赏吧！','horizontalIn',600,false,2000,false,65*2*0.5,40,'horizontalOut',true],   
-					
-					
-					
+								
 	];
 	//自动处理时间轴间隔
 	var delay=1000;
